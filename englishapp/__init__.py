@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
 app = Flask(__name__)  # định vị vị trí của project hiện tại
-
+app.secret_key = 'S@mpleSecretKey123!@#' # Bạn có thể đặt chuỗi tùy ý
 
 # --- CẤU HÌNH DATABASE CHO AWS RDS ---
 # Định dạng: mysql+pymysql://user:password@endpoint/db_name

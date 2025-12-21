@@ -118,7 +118,8 @@ def login_admin_process():
         return redirect("/admin")
 
     else:
-        err_msg = "Tài khoản hoặc mật khẩu không đúng!"
+        flash("Tài khoản hoặc mật khẩu không đúng!", "danger")
+        return redirect("/admin")
 
 if __name__ == '__main__':
     with app.app_context():

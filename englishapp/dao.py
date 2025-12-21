@@ -4,7 +4,7 @@ import hashlib
 from sqlalchemy import func
 
 from englishapp import app, db
-from models import Capdo, Khoahoc, Lophoc, User
+from englishapp.models import Capdo, Khoahoc, Lophoc, User
 
 def load_capdo():
     # with open("data/capdo.json", encoding="utf-8") as f:
