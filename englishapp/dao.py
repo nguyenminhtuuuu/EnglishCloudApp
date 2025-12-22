@@ -72,15 +72,17 @@ def get_khoahoc_by_maKH(id):
 
 
 def get_lophoc_by_maKH(id):
-    with open("data/lophoc.json", encoding="utf-8") as f:
-        lophoc = json.load(f)
+    from englishapp.models import Lophoc
+    return Lophoc.query.filter(Lophoc.maKH == id).all()
+    #with open("englishapp/data/lophoc.json", encoding="utf-8") as f:
+       # lophoc = json.load(f)
 
-    result = []
-    for l in lophoc:
-        if l["maKH"] == id:
-            result.append(l)
+    #result = []
+    #for l in lophoc:
+        #if l["maKH"] == id:
+            #result.append(l)
 
-    return result
+    #return result
 
 
 def auth_user(username, password):

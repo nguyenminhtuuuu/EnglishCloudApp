@@ -61,7 +61,7 @@ if __name__ == "__main__":
         db.session.add_all([c1, c2, c3])
         db.session.commit()
 
-        with open("data/khoahoc.json", encoding="utf-8") as f:
+        with open("englishapp/data/khoahoc.json", encoding="utf-8") as f:
             khoahoc = json.load(f)
 
             for k in khoahoc:
@@ -70,7 +70,7 @@ if __name__ == "__main__":
             db.session.commit()
 
 
-        with open("data/lophoc.json", encoding="utf-8") as f:
+        with open("englishapp/data/lophoc.json", encoding="utf-8") as f:
             lophoc = json.load(f)
 
             for l in lophoc:
